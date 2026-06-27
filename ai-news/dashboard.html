@@ -2,7 +2,7 @@
 <html lang=zh-CN>
 <head>
 <meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1.0">
+<meta name=viewport content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>🤖 AI 全球速递 · 刘闪电</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,7 +15,6 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 .header-right .time{color:#888;font-size:13px;font-variant-numeric:tabular-nums}
 .btn{background:#1a1a2e;color:#aaa;border:1px solid #2a2a4a;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;transition:all .2s}
 .btn:hover{background:#2a2a4e;color:#fff;border-color:#7c3aed}
-.btn-refresh.loading{opacity:.5;pointer-events:none}
 /* SOURCE STATS */
 .stats{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}
 .stat-card{background:linear-gradient(135deg,#111128,#0d0d1a);border:1px solid #1a1a3e;border-radius:8px;padding:6px 12px;font-size:11px;color:#888;display:flex;align-items:center;gap:6px}
@@ -34,27 +33,21 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 .news-card:hover::before{opacity:1}
 .news-card .meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:11px}
 .news-card .source-badge{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap}
-.badge-hn{background:#ff660022;color:#ff6600;border:1px solid #ff660033}
-.badge-techcrunch{background:#0a9e0122;color:#0aff01;border:1px solid #0a9e0133}
-.badge-verge{background:#ff430122;color:#ff4301;border:1px solid #ff430133}
-.badge-mit{background:#0055ff22;color:#4488ff;border:1px solid #0055ff33}
-.badge-hf{background:#ffcc0022;color:#ffcc00;border:1px solid #ffcc0033}
-.badge-reddit{background:#ff450022;color:#ff4500;border:1px solid #ff450033}
-.badge-gh{background:#ffffff22;color:#ddd;border:1px solid #ffffff33}
-.badge-dev{background:#00a3ff22;color:#00a3ff;border:1px solid #00a3ff33}
-.badge-rss{background:#ff660022;color:#ff8800;border:1px solid #ff660033}
+.badge-cn{background:#00ff8822;color:#00ff88;border:1px solid #00ff8833}
+.badge-en{background:#7c3aed22;color:#a78bfa;border:1px solid #7c3aed33}
 .news-card .time{color:#555;font-size:11px;margin-left:auto}
+.news-card .source-name{color:#888;font-size:11px}
 .news-card .title{font-size:14px;font-weight:600;color:#e0e0f0;line-height:1.4;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.news-card .desc{font-size:12px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.news-card .summary{font-size:13px;color:#b0b0c0;line-height:1.6;margin-bottom:8px;padding:8px 10px;background:rgba(124,58,237,0.06);border-radius:6px;border-left:2px solid #7c3aed44}
+.news-card .original-title{font-size:11px;color:#555;margin-bottom:6px;font-style:italic}
+.news-card .desc{font-size:12px;color:#777;line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1}
 .news-card .link{font-size:11px;color:#7c3aed;text-decoration:none;margin-top:auto;opacity:.7;transition:opacity .2s;display:inline-flex;align-items:center;gap:4px}
 .news-card .link:hover{opacity:1;color:#00d4ff}
-/* STATUS & LOADING */
+/* STATUS */
 .status{text-align:center;padding:30px;color:#555}
 .status .spinner{display:inline-block;width:24px;height:24px;border:2px solid #1a1a2e;border-top-color:#7c3aed;border-radius:50%;animation:spin .8s linear infinite;margin-bottom:10px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .status .msg{font-size:13px}
-.error-banner{background:#1a0a0a;border:1px solid #ff333322;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;color:#ff6666}
-.error-banner .retry{color:#7c3aed;cursor:pointer;text-decoration:underline;margin-left:6px}
 /* FOOTER */
 .footer{text-align:center;padding:20px 0;font-size:11px;color:#333;border-top:1px solid #111;margin-top:20px}
 /* SCROLLBAR */
@@ -70,7 +63,8 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
   .header-right{width:100%;display:flex;justify-content:space-between}
   .news-card{padding:12px}
   .news-card .title{font-size:15px;-webkit-line-clamp:3}
-  .news-card .desc{font-size:13px;-webkit-line-clamp:4}
+  .news-card .summary{font-size:14px}
+  .news-card .desc{font-size:13px}
   .tab{padding:6px 12px;font-size:13px}
   .stat-card{padding:4px 10px;font-size:10px}
   .stats{gap:5px}
@@ -86,11 +80,11 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 <div class=header>
   <div class=header-left>
     <h1>🤖 AI 全球速递</h1>
-    <div class=sub>🌐 聚合 Hacker News · TechCrunch · The Verge · MIT · Hugging Face · Reddit · GitHub · Dev.to</div>
+    <div class=sub>🌐 Hacker News · TechCrunch · Hugging Face · GitHub · Dev.to · 36氪</div>
   </div>
   <div class=header-right>
     <span class=time id=clock></span>
-    <button class=btn id=refreshBtn onclick=loadAll()>🔄 刷新</button>
+    <button class=btn id=refreshBtn onclick=loadData()>🔄 刷新</button>
   </div>
 </div>
 
@@ -98,255 +92,135 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 
 <div class=tabs id=tabsBar>
   <button class="tab active" data-filter=all onclick="setFilter('all',this)">🔥 全部</button>
+  <button class=tab data-filter=cn onclick="setFilter('cn',this)">🇨🇳 国内</button>
+  <button class=tab data-filter=en onclick="setFilter('en',this)">🌍 国外</button>
   <button class=tab data-filter=hot onclick="setFilter('hot',this)">⚡ 热门</button>
-  <button class=tab data-filter=paper onclick="setFilter('paper',this)">📄 论文/研究</button>
   <button class=tab data-filter=opensource onclick="setFilter('opensource',this)">🛠 开源</button>
 </div>
 
-<div id=newsContainer><div class=status><div class=spinner></div><div class=msg>正在获取全球AI新闻…</div></div></div>
-<div id=errorContainer></div>
+<div id=newsContainer><div class=status><div class=spinner></div><div class=msg>加载中…</div></div></div>
 
-<div class=footer>🤖 AI 全球速递 · 数据来源各大平台 · 自动更新</div>
+<div class=footer>🤖 AI 全球速递 · 每30分钟自动更新</div>
 
 <script>
-// ============ CONFIG ============
-const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
+// ═══ CONFIG ═══
+const DATA_URL = 'https://ryanliu518.github.io/RyanLiu-fitness-dashboard/ai-news/data/news.json';
+const DATA_URL_FALLBACK = 'https://ryanliu518.github.io/RyanLiu-fitness-dashboard/ai-news/data/news_raw.json';
 
-function hnApiUrl(){
-  const ts=Math.floor(Date.now()/1000)-86400;
-  return `https://hn.algolia.com/api/v1/search?query=artificial%20intelligence%20OR%20AI%20OR%20LLM%20OR%20GPT%20OR%20deep%20learning%20OR%20machine%20learning%20OR%20transformer%20OR%20neural%20OR%20diffusion&tags=story&hitsPerPage=40&numericFilters=created_at_i>${ts}`;
-}
-
-let currentFilter = 'all';
 let allItems = [];
-let failedSources = [];
+let currentFilter = 'all';
 
-// ============ HELPERS ============
+// ═══ HELPERS ═══
 function timeAgo(ts){
   const sec=Math.floor((Date.now()-new Date(ts).getTime())/1000);
-  if(sec<60)return '刚刚';
+  if(sec<60)return'刚刚';
   const m=Math.floor(sec/60);if(m<60)return m+'分钟前';
   const h=Math.floor(m/60);if(h<24)return h+'小时前';
   return Math.floor(h/24)+'天前';
 }
 
-function truncate(txt,len=120){
-  if(!txt)return'';
-  return txt.length>len?txt.slice(0,len)+'…':txt;
-}
-
-function getSourceBadge(source){
-  const map={
-    'Hacker News':'badge-hn',
-    'TechCrunch':'badge-techcrunch',
-    'The Verge':'badge-verge',
-    'MIT':'badge-mit',
-    'Hugging Face':'badge-hf',
-    'Reddit':'badge-reddit',
-    'GitHub':'badge-gh',
-    'Dev.to':'badge-dev'
-  };
-  const cls=map[source]||'badge-rss';
-  return `<span class="source-badge ${cls}">${source}</span>`;
-}
-
-// ============ DATA SOURCES ============
-
-// 1. Hacker News Algolia - AI stories last 24h
-async function fetchHN(){
-  const resp=await fetch(hnApiUrl());
-  const data=await resp.json();
-  return (data.hits||[]).map(h=>({
-    source:'Hacker News',
-    title:h.title,
-    url:h.url||`https://news.ycombinator.com/item?id=${h.objectID}`,
-    desc:h.points?`⬆ ${h.points} 分 · ${h.num_comments||0} 条评论`:'',
-    time:new Date(h.created_at).toISOString(),
-    hot:h.points>100?'hot':null,
-    tags:[]
-  }));
-}
-
-// 2. Fetch RSS via rss2json
-async function fetchRSS(name,url,label='hot'){
-  const resp=await fetch(`${RSS2JSON}${encodeURIComponent(url)}`);
-  const data=await resp.json();
-  if(data.status!=='ok')throw new Error(data.message||'RSS parse failed');
-  return (data.items||[]).slice(0,12).map(i=>({
-    source:name,
-    title:i.title,
-    url:i.link,
-    desc:truncate((i.description||'').replace(/<[^>]+>/g,''),200),
-    time:i.pubDate,
-    hot:label,
-    tags:[]
-  }));
-}
-
-// 3. Reddit (direct JSON, CORS-friendly)
-async function fetchReddit(){
-  const resp=await fetch('https://www.reddit.com/r/artificial/hot.json?limit=15',{headers:{'User-Agent':'Mozilla/5.0'}});
-  const data=await resp.json();
-  return (data.data?.children||[]).map(c=>{
-    const d=c.data;
-    return{
-      source:'Reddit',
-      title:d.title,
-      url:`https://reddit.com${d.permalink}`,
-      desc:`⬆ ${d.ups} · ${d.num_comments||0} 条评论`,
-      time:new Date(d.created_utc*1000).toISOString(),
-      hot:d.ups>100?'hot':null,
-      tags:[]
-    };
-  });
-}
-
-// 4. GitHub Trending AI repos via unofficial API
-async function fetchGitHub(){
-  const resp=await fetch('https://api.github.com/search/repositories?q=topic:artificial-intelligence+topic:llm+topic:deep-learning&sort=stars&order=desc&per_page=10');
-  const data=await resp.json();
-  return (data.items||[]).map(r=>({
-    source:'GitHub',
-    title:r.full_name,
-    url:r.html_url,
-    desc:truncate(r.description||'',180)+` ⭐ ${r.stargazers_count.toLocaleString()}`,
-    time:r.pushed_at,
-    hot:r.stargazers_count>1000?'hot':null,
-    tags:['opensource']
-  }));
-}
-
-// 5. Dev.to - AI articles
-async function fetchDevto(){
-  const resp=await fetch('https://dev.to/api/articles?tag=ai&per_page=15');
-  const data=await resp.json();
-  return (data||[]).map(a=>({
-    source:'Dev.to',
-    title:a.title,
-    url:a.url,
-    desc:truncate(a.description||'',180),
-    time:a.published_at,
-    hot:a.positive_reactions_count>30?'hot':null,
-    tags:[]
-  }));
-}
-
-// ============ MAIN LOADER ============
-async function loadAll(){
-  const btn=document.getElementById('refreshBtn');
+// ═══ LOAD DATA ═══
+async function loadData(){
   const container=document.getElementById('newsContainer');
-  const errContainer=document.getElementById('errorContainer');
+  const btn=document.getElementById('refreshBtn');
   btn.classList.add('loading');
   btn.textContent='⏳ 加载中…';
-  errContainer.innerHTML='';
-  allItems=[];
-  failedSources=[];
+  container.innerHTML='<div class=status><div class=spinner></div><div class=msg>加载中…</div></div>';
 
-  container.innerHTML='<div class=status><div class=spinner></div><div class=msg>正在获取全球AI新闻…</div></div>';
-
-  const sources=[
-    {name:'Hacker News',fn:fetchHN},
-    {name:'TechCrunch',fn:()=>fetchRSS('TechCrunch','https://techcrunch.com/category/artificial-intelligence/feed/','hot')},
-    {name:'The Verge',fn:()=>fetchRSS('The Verge','https://www.theverge.com/ai-artificial-intelligence/rss.xml','hot')},
-    {name:'MIT',fn:()=>fetchRSS('MIT','https://news.mit.edu/topic/artificial-intelligence/rss2','paper')},
-    {name:'Hugging Face',fn:()=>fetchRSS('Hugging Face','https://huggingface.co/blog/feed.xml','opensource')},
-    {name:'Reddit',fn:fetchReddit},
-    {name:'GitHub',fn:fetchGitHub},
-    {name:'Dev.to',fn:fetchDevto}
-  ];
-
-  // Run all in parallel with individual error handling
-  const results=await Promise.allSettled(sources.map(s=>s.fn().then(items=>{
-    allItems.push(...items);
-  }).catch(e=>{
-    failedSources.push(s.name);
-  })));
-
-  // Dedup by URL
-  const seen=new Set();
-  allItems=allItems.filter(i=>{
-    const key=i.url||i.title;
-    if(seen.has(key))return false;
-    seen.add(key);
-    return true;
-  });
-
-  // Sort by time (newest first)
-  allItems.sort((a,b)=>new Date(b.time)-new Date(a.time));
-
-  renderAll();
-
-  // Show errors
-  if(failedSources.length>0){
-    errContainer.innerHTML=`<div class=error-banner>⚠️ ${failedSources.join('、')} 暂时无法获取 <span class=retry onclick=loadAll()>重试</span></div>`;
+  let data = null;
+  // Try news.json first (with summaries), fallback to news_raw.json
+  for (const url of [DATA_URL, DATA_URL_FALLBACK]) {
+    try {
+      const resp = await fetch(url + '?t=' + Date.now());
+      if (!resp.ok) throw new Error(resp.status);
+      data = await resp.json();
+      if (data && data.news && data.news.length > 0) break;
+    } catch(e) {
+      console.log('Failed:', url);
+    }
   }
 
+  if (!data || !data.news || data.news.length === 0) {
+    container.innerHTML='<div class=status><div class=msg>😴 暂无数据，稍后再试</div></div>';
+    btn.classList.remove('loading');
+    btn.textContent='🔄 刷新';
+    return;
+  }
+
+  allItems = data.news;
+  render();
   btn.classList.remove('loading');
   btn.textContent='🔄 刷新';
 }
 
-// ============ RENDER ============
-function renderAll(){
+// ═══ RENDER ═══
+function render(){
   const container=document.getElementById('newsContainer');
   const statsBar=document.getElementById('statsBar');
 
-  if(allItems.length===0){
-    container.innerHTML='<div class=status><div class=msg>😴 暂无新闻，点刷新试试</div></div>';
-    return;
-  }
-
   // Stats
   const counts={};
-  allItems.forEach(i=>{counts[i.source]=(counts[i.source]||0)+1});
+  let cnCount=0, enCount=0;
+  allItems.forEach(i=>{
+    counts[i.source]=(counts[i.source]||0)+1;
+    if(i.lang==='cn') cnCount++; else enCount++;
+  });
   statsBar.innerHTML=Object.entries(counts).map(([k,v])=>
     `<div class=stat-card><span class=src>${k}</span> <span class=num>${v}</span></div>`
-  ).join('')+`<div class=stat-card><span class=src>共</span> <span class=num>${allItems.length}</span> <span class=src>条</span></div>`;
+  ).join('')+`<div class=stat-card><span class=src>🇨🇳</span> <span class=num>${cnCount}</span></div><div class=stat-card><span class=src>🌍</span> <span class=num>${enCount}</span></div><div class=stat-card><span class=src>共</span> <span class=num>${allItems.length}</span></div>`;
 
   // Filter
-  let filtered=allItems;
-  if(currentFilter==='hot')filtered=allItems.filter(i=>i.hot==='hot');
-  else if(currentFilter==='paper')filtered=allItems.filter(i=>i.source==='MIT'||(i.tags||[]).includes('paper'));
-  else if(currentFilter==='opensource')filtered=allItems.filter(i=>i.source==='Hugging Face'||i.source==='GitHub'||(i.tags||[]).includes('opensource'));
+  let filtered = allItems;
+  if(currentFilter==='cn') filtered = allItems.filter(i=>i.lang==='cn');
+  else if(currentFilter==='en') filtered = allItems.filter(i=>i.lang==='en');
+  else if(currentFilter==='hot') filtered = allItems.filter(i=>i.hot==='hot');
+  else if(currentFilter==='opensource') filtered = allItems.filter(i=>(i.tags||[]).includes('opensource'));
 
   if(filtered.length===0){
     container.innerHTML='<div class=status><div class=msg>该分类暂无新闻</div></div>';
     return;
   }
 
-  container.innerHTML=filtered.map(i=>`
-    <div class=news-card>
+  container.innerHTML = filtered.map(i => {
+    const langFlag = i.lang === 'cn' ? '🇨🇳' : '🌍';
+    const badgeCls = i.lang === 'cn' ? 'badge-cn' : 'badge-en';
+    const summaryHtml = i.summary ? `<div class=summary>📌 ${i.summary}</div>` : '';
+    const origTitleHtml = (i.lang === 'en' && i.title) ? `<div class=original-title>📰 ${i.title}</div>` : '';
+
+    return `<div class=news-card>
       <div class=meta>
-        ${getSourceBadge(i.source)}
+        <span class="source-badge ${badgeCls}">${langFlag} ${i.source}</span>
         ${i.hot==='hot'?'<span style=font-size:12px>🔥</span>':''}
         <span class=time>${timeAgo(i.time)}</span>
       </div>
-      <div class=title>${i.title}</div>
-      <div class=desc>${i.desc||'暂无摘要'}</div>
-      <a class=link href="${i.url}" target=_blank rel=noopener>阅读全文 →</a>
-    </div>
-  `).join('');
+      <div class=title>${i.lang==='cn' ? i.title : (i.title_cn || i.title)}</div>
+      ${summaryHtml}
+      ${origTitleHtml}
+      <a class=link href="${i.url}" target=_blank rel=noopener>查看原文 →</a>
+    </div>`;
+  }).join('');
 }
 
-// ============ FILTER ============
+// ═══ FILTER ═══
 function setFilter(filter,el){
   currentFilter=filter;
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
-  renderAll();
+  render();
 }
 
-// ============ CLOCK ============
+// ═══ CLOCK ═══
 function updateClock(){
   const now=new Date();
   const opts={year:'numeric',month:'2-digit',day:'2-digit',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Shanghai'};
   document.getElementById('clock').textContent='🕐 '+now.toLocaleDateString('zh-CN',opts);
 }
 
-// ============ AUTO REFRESH ============
+// ═══ INIT ═══
 updateClock();
 setInterval(updateClock,10000);
-loadAll();
-setInterval(loadAll,300000); // auto refresh every 5min
+loadData();
+setInterval(loadData, 600000); // 10min auto refresh
 </script>
 </body>
 </html>
