@@ -1,0 +1,696 @@
+{
+  "updated_at": "2026-06-27 16:23",
+  "total": 65,
+  "news": [
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "秋声 | 大秦储能冲港股IPO：锂价50万山顶囤货血泪史，亏本三年才清完",
+      "url": "https://36kr.com/p/3871109381035011?f=rss",
+      "desc": "本文约2500字，建议阅读5分钟\n  作者&nbsp;|&nbsp;彭孝秋\n  \n   编者按：AI 大爆发之际，越来越多公司走向资本市场。每一份招股书翻动的声音里，都藏着一家公司想说与未曾明说的全部。\n   鉴于此，硬氪特推出「秋声」专栏。秋声取自欧阳修《秋声赋》，借“听秋声”之意，观产业冷暖，辨公司成色，记录企业冲刺 IPO 途中那些被写下与被隐藏的真实。这是我们第三期，大秦数字能源。\n  \n  6月26日，储能公司大秦数字能源向港交所递交了上市申请。\n  2025年，大秦数字能源收入25.",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "G7易流发布货运行业首款穿戴式AI硬件「拍拍豆」，填平物流交付的“最后两米”｜最前线",
+      "url": "https://36kr.com/p/3869740772316162?f=rss",
+      "desc": "作者｜黄楠\n  编辑｜袁斯来\n  6月25日，G7易流发布货运行业首款穿戴式AI硬件“拍拍豆”。这款产品克重仅30克，采用磁吸设计，当车辆熄火停稳后，司机可直接将设备从挡风玻璃底座取下，佩戴于胸前即可自动启动录制；放回底座瞬间，录制文件将自动同步上传云端存储。\n  从“看见车上”到“看见车下”，物流AI的应用场景正在完成一次关键跨越。\n  物流行业的AI化进程加速。据中国物流与采购联合会等机构统计，2025年全球物流与供应链管理AI市场规模已超过340亿美元，预计2026年将增长至479.2亿美",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "9点1氪｜苹果涨价引山姆代购潮；DeepSeek大规模招聘；黄金再度跌破4000美元",
+      "url": "https://36kr.com/p/3870720040588295?f=rss",
+      "desc": "今日热点导览\n  OpenAI官宣推出GPT-5.6\n  亚洲“果链”股价几乎全线大幅下跌\n  SpaceX计划为美国消费者推出新的星链移动服务\n  美团股价低迷，王兴回应\n  小鹏机器人调整：新设九部门，何小鹏兼任产品部负责人\n  微信回应朋友圈互动规则：单删原封不动，互删清空对方全部痕迹\n  TOP3大新闻\n  苹果涨价引山姆代购潮，部分门店已卖断货\n  近日，社交媒体上多名网友反馈，多地山姆会员超市的iPad及Mac系列产品出现抢购、代购的情况。原因在于，苹果宣布上调iPad及Mac系列产",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "追赶FSD V14，理想在补哪些课？｜最前线",
+      "url": "https://36kr.com/p/3870292939658242?f=rss",
+      "desc": "过去几年，智能驾驶行业的竞争重心经历了几次明显变化。\n  最早比的是硬件：激光雷达要不要上、摄像头装几个、算力做到多少 TOPS；随后进入大模型时代，竞争开始转向端到端、VLA（Vision-Language-Action）、World Model（世界模型）等路线。\n  到了今天，越来越多公司发现，仅仅拥有更大的模型已经不足以形成代际优势，真正决定上限的，开始变成模型、数据、算力和芯片之间能否形成一个持续迭代的闭环。\n  这也是为什么越来越多车企开始走向自研。\n  特斯拉几乎覆盖了从数据采集、",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "氪星晚报 ｜智元旗下灵巧手估值10亿美元，成立仅5个月首季实现盈利；DeepSeek计划将所有部门规模扩大至少一倍",
+      "url": "https://36kr.com/p/3869884559332356?f=rss",
+      "desc": "大公司：\n  五粮液：曾从钦无法正常履职离任，选举邓敏为公司董事长\n  36氪获悉，五粮液公告，因曾从钦无法正常履职，公司于2026年6月26日召开2025年度股东会，审议通过《关于免去董事及补选第七届董事会非独立董事的议案》，自本次股东会审议通过之日起，曾从钦不再担任公司董事职务，其担任的董事长、董事会专门委员会主任委员及委员职务一并自动解除（原定任期至公司第七届董事会日期届满之日即2028年6月19日止），离任后不在公司及控股子公司任职，其离任不会对公司正常经营产生影响。截至本公告披露日，曾",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "《走进AIE》，谁是下一个主角",
+      "url": "https://36kr.com/p/3869838577620231?f=rss",
+      "desc": "一展两地，链接全球 &nbsp; &nbsp;AIE 电子展成为龙头企业的必选舞台\n  全球智能制造产业加速演进，粤港澳大湾区正成为打造世界级科技展会的核心阵地。2026全球智能制造与电子产品博览会（AIE）依托大湾区完备的产业生态，致力于打造中国智能制造首发平台。\n  技术创新的源头既来自产业一线的龙头力量，也来自科研院所的前沿探索，更来自真实场景中的实战检验。为此，AIE 组委会联合南方财经、新华网、南方+等权威媒体，重磅推出《走进AIE》专题栏目，全维度挖掘产业、科研与场景应用的创新价值，",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "对话张亚勤：AI不是泡沫，但AI公司有泡沫",
+      "url": "https://36kr.com/p/3866837793952769?f=rss",
+      "desc": "文 | 海若镜\n  访谈 | 海若镜 巴芮\n  6月盛夏，在清华无锡研究院智能产业创新中心，我们见到了张亚勤院士。他匆匆赶来，一进门，就建议让室内温度降得更低些。\n  访谈中，聊起当下具身智能、AI投资创业热潮，张亚勤也觉得应该降降温，“更冷静些，不要急躁”。\n  五年前，张亚勤创建了清华大学智能产业研究院（以下简称AIR)，聚集了多位有AI产业经验的知名教授。据介绍，如今AIR的第一届博士生已经毕业；这里孵化、走出的十家公司，累计“融资约150亿元，估值1500亿元”。其中，华深智药、它石智航",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "马克·古尔曼：触屏MacBook将搭载M5芯片发布，苹果计划跳过M6 Pro及M6 Max",
+      "url": "https://36kr.com/newsflashes/3871135669048322?f=rss",
+      "desc": "当地时间6月26日，科技记者马克·古尔曼发文称，苹果传闻中的触屏MacBook Pro将在今年晚些时候或2027年初发布，首发搭载现役M5 Pro及M5 Max芯片。苹果此后计划推出配备M7芯片的升级版本，这与此前报道苹果将跳过M6 Pro及M6 Max直接推出M7系列的计划相吻合。苹果跳过高端M6芯片的决策被认为与内存短缺导致的成本压力密切相关，苹果本周已因此宣布上调Mac及iPad产品售价。（界面新闻）",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "外媒：苹果寻求获准从长鑫存储购买内存芯片",
+      "url": "https://36kr.com/newsflashes/3871131045876995?f=rss",
+      "desc": "据英国《金融时报》27日报道，六位知情人士透露，为缓解内存芯片涨价带来的成本压力，苹果公司正向美国政府游说，希望获批采购中国半导体企业长鑫存储(CXMT)的内存芯片。（中新经纬）",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "高通计划将数据中心芯片技术引入智能手机，提升端侧AI能力",
+      "url": "https://36kr.com/newsflashes/3871117388174336?f=rss",
+      "desc": "6月27日消息，高通公司执行副总裁杜尔加·马拉迪表示，公司计划将本周新发布的数据中心芯片技术应用于智能手机，以提升移动设备本地AI运行能力。高通新推出的高带宽计算（HBC）架构采用芯片垂直堆叠设计，将内存与计算单元紧密集成，可显著提升数据传输速度与效率。该架构第一代产品将于明年在数据中心推出，预计2028年实现商业化供货。马拉迪表示，“数据中心的技术不会止步于此”，公司目前正与智能手机、个人电脑及汽车制造商就相关技术展开洽谈。（界面新闻）",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "今年以来算力相关产品加速出海，有武汉企业800G以上光模块出口同比增长超过100倍",
+      "url": "https://36kr.com/newsflashes/3871102147908867?f=rss",
+      "desc": "6月27日，今年前5个月，我国机电产品出口额7.58万亿元，占我国出口总值的比重达到63.6%。自2025年3月起，连续15个月刷新同期月度最高值。记者在浙江嘉兴的一家工厂看到，这里有近1000台织布机正在织布，它是人工智能服务器中的电子布。电子布，是电子信息产业当中的关键材料。随着算力需求爆发，电子布需求也随之增加。企业车间里，产线24小时满产运行。今年以来，和算力有关的相关产品加速出海。在武汉，光模块的生产线同样24小时不停机。随着全球算力基础设施建设加速推进，今年以来，这家企业800G以上",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "36氪",
+      "lang": "cn",
+      "title": "国家统计局：1—5月份电子行业利润同比增长103.9%",
+      "url": "https://36kr.com/newsflashes/3870821042312192?f=rss",
+      "desc": "财联社6月27日电，国家统计局工业司首席统计师于卫宁解读2026年1—5月份工业企业利润数据。于卫宁表示，电子行业支撑作用明显。1—5月份，规模以上装备制造业利润同比增长14.1%，拉动全部规模以上工业企业利润增长5.2个百分点。从行业看，全球人工智能技术变革带来高端算力芯片和存储芯片需求爆发，推动电子行业利润高速增长，1—5月份，电子行业利润增长103.9%，对全部规模以上工业企业利润增长的贡献率达43.1%，是规模以上工业企业利润较快增长的重要支撑。（财联社）",
+      "time": "2026-06-27T08:23:04.644297+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "Sizing a Mac mini M4 for Local AI: An Architect's Breakdown by Task",
+      "url": "https://dev.to/sauvast/sizing-a-mac-mini-m4-for-local-ai-an-architects-breakdown-by-task-1cp2",
+      "desc": "Every few weeks someone asks me the same question: \"Should I buy a Mac mini M4 to run AI locally?\"...",
+      "time": "2026-06-27T08:11:53+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "I built a personal image hosting and file manager on Cloudflare Workers",
+      "url": "https://dev.to/yuit_axiba_b211c7ed6c643d/i-built-a-personal-image-hosting-and-file-manager-on-cloudflare-workers-4jko",
+      "desc": "I wanted a small image hosting service that I could deploy without maintaining a server.  Most image...",
+      "time": "2026-06-27T07:48:19+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "How to generate a cryptographic receipt for every AI inference",
+      "url": "https://dev.to/pulkit_srivastava_8ce4f05/how-to-generate-a-cryptographic-receipt-for-every-ai-inference-3j6p",
+      "desc": "The EU AI Act enforcement starts August 2026. Article 13(3)(c) requires  technical documentation of...",
+      "time": "2026-06-27T07:31:34+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "Your Team Doesn’t Need a Better AI Model This Week",
+      "url": "https://dev.to/chrisbuildsonline/your-team-doesnt-need-a-better-ai-model-this-week-2og7",
+      "desc": "The real upgrade is your workflow contract: permissions, durability, and handoffs.           The...",
+      "time": "2026-06-27T07:25:48+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "Persistent memory for Ollama, in about five minutes",
+      "url": "https://dev.to/azard_tennant-hosein/persistent-memory-for-ollama-in-about-five-minutes-4co5",
+      "desc": "Originally published on the Sieve blog. Sieve is an open-source (Apache 2.0) context-reduction proxy...",
+      "time": "2026-06-27T07:14:26+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "What Is an Agent Registry? (And What We Broke Before We Had One)",
+      "url": "https://dev.to/sahajmeet_kaur_/what-is-an-agent-registry-and-what-we-broke-before-we-had-one-37jn",
+      "desc": "We had 14 agents running across three teams before anyone could answer 'which agents do we actually have?' An agent registry is the infrastructure that fixes that. Here's what it is, what it's not, an",
+      "time": "2026-06-27T06:30:00+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "How Small Can an Agent Model Get? The Nemotron Floor",
+      "url": "https://dev.to/tessl-io/how-small-can-an-agent-model-get-the-nemotron-floor-5gne",
+      "desc": "Most model comparisons ask which model is best. This one starts with a model that never even produced...",
+      "time": "2026-06-27T06:21:19+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "How We Govern Three AI Agents With Five Plain-Text Files",
+      "url": "https://dev.to/dyclgtm/how-we-govern-three-ai-agents-with-five-plain-text-files-p4b",
+      "desc": "How We Govern Three AI Agents With Five Plain-Text Files    孔明伴生团 — 镇星（首席架构治理官 · Multi-Agent...",
+      "time": "2026-06-27T05:19:15+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "I gave Claude SSH access to my server — here's the consent gate that makes it safe",
+      "url": "https://dev.to/mhasnainjafri/i-gave-claude-ssh-access-to-my-server-heres-the-consent-gate-that-makes-it-safe-3am3",
+      "desc": "Letting an AI assistant run commands on a real server is genuinely useful — and genuinely terrifying....",
+      "time": "2026-06-27T05:07:39+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "Truthmark for AI Loop Engineering: Keeping Product Behavior Observable",
+      "url": "https://dev.to/merlin_h_2636e3753c2e642e/using-truthmark-to-improve-loop-engineering-a-fact-layer-for-ai-coding-agents-gng",
+      "desc": "AI coding agents are useful because they can make changes quickly. That same strength creates a...",
+      "time": "2026-06-27T04:25:36+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "Trump Admin releases Anthropic  Mythos to be used by more than 100 US companies, agencies",
+      "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
+      "desc": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
+      "time": "2026-06-27T01:01:37",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "AI Didn't Invent Slop. It Only Made It Infinite.",
+      "url": "https://dev.to/copyleftdev/ai-didnt-invent-slop-it-only-made-it-infinite-21o4",
+      "desc": "AI didn't invent disposable culture. It only removed the last bottleneck — and that changes what your job as an engineer actually is.",
+      "time": "2026-06-27T00:01:32+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: Statey – the database your AI shares across every chat, over MCP",
+      "url": "https://www.statey.ai",
+      "desc": "⬆ 2分 · 2条评论",
+      "time": "2026-06-26T20:18:33+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
+      "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "desc": "“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best tools from users, developers, enterprises, cyber defenders, and global partners who need them.”",
+      "time": "2026-06-26T18:32:14",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "OpenAI poaches Uber India chief to lead its biggest market outside the US",
+      "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/",
+      "desc": "The hire marks OpenAI's latest push into India, expanding offices, partnerships and hiring.",
+      "time": "2026-06-26T18:19:36",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "desc": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.   OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a",
+      "time": "2026-06-26T17:43:22",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "Never forget to enter the Stern Grove lottery again!",
+      "url": "https://dev.to/entire/never-forget-to-enter-the-stern-grove-lottery-again-31i5",
+      "desc": "Browser automation with Playwright, Python, GitHub Actions, and Entire to auto-enter San Francisco Stern Grove concert lotteries each week!",
+      "time": "2026-06-26T17:18:04+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "A Guide to AI Cold Starts on Cloud Run",
+      "url": "https://dev.to/googleai/a-guide-to-ai-cold-starts-on-cloud-run-c6d",
+      "desc": "I saw a developer asking on Reddit if there was any “sane way” to manage Cloud Run cold starts for AI...",
+      "time": "2026-06-26T16:50:58+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: Smart model routing directly in Claude, Codex and Cursor",
+      "url": "https://github.com/workweave/router",
+      "desc": "⬆ 167分 · 97条评论",
+      "time": "2026-06-26T16:40:11+00:00",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "It’s not about Anthropic vs. OpenAI anymore",
+      "url": "https://techcrunch.com/2026/06/26/its-not-about-anthropic-vs-openai-anymore/",
+      "desc": "AI models have progressed to the point where their capabilities have real political consequences. Dealing with those consequences will require collective action.",
+      "time": "2026-06-26T16:24:47",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: BetterDB, MIT Valkey-native context layer for AI agents",
+      "url": "https://github.com/BetterDB-inc/monitor/tree/master/packages",
+      "desc": "⬆ 5分 · 1条评论",
+      "time": "2026-06-26T15:16:24+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia",
+      "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/",
+      "desc": "Nvidia has dominated the AI chip market for years, but the era of total dependence might be ending.   OpenAI just shared its plans to spice things up with Jalapeño, its custom inference chip built with Broadcom, joining Google, Apple, and SpaceX in a",
+      "time": "2026-06-26T14:00:00",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "Early Bird pricing ends tonight for TechCrunch Founder Summit",
+      "url": "https://techcrunch.com/2026/06/26/early-bird-pricing-ends-tonight-for-techcrunch-founder-summit/",
+      "desc": "Save up to $190 on your pass to TechCrunch Founder Summit 2026. Early Bird pricing ends today, at 11:59 p.m. PT, after which rates increase. Register now.",
+      "time": "2026-06-26T13:00:00",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: Unofficial cross-platform Shure MV client",
+      "url": "https://github.com/Humblemonk/shurectl",
+      "desc": "⬆ 2分 · 0条评论",
+      "time": "2026-06-26T09:58:12+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "1,200 Applications. 4 Offers. Here's What Actually Got Me the Product-Based Role",
+      "url": "https://dev.to/varshithvhegde/1200-applications-4-offers-heres-what-actually-got-me-the-product-based-role-10mp",
+      "desc": "I am going to start with a number most people will not say out loud.  1,200 applications.  That is...",
+      "time": "2026-06-26T06:36:53+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Dev.to",
+      "lang": "en",
+      "title": "Functional doesn't mean correct. That's the biggest risk with AI-generated code.",
+      "url": "https://dev.to/cyclopt_dimitrisk/functional-doesnt-mean-correct-thats-the-biggest-risk-with-ai-generated-code-29dh",
+      "desc": "The code runs. That's not the question.   There's a failure mode with AI-generated code...",
+      "time": "2026-06-26T06:17:15+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "Lightning-AI/litgpt",
+      "url": "https://github.com/Lightning-AI/litgpt",
+      "desc": "20+ high-performance LLMs with recipes to pretrain, finetune and deploy at scale. ⭐ 13,443",
+      "time": "2026-06-26T01:48:30+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Run a vLLM Server on HF Jobs in One Command",
+      "url": "https://huggingface.co/blog/vllm-jobs",
+      "desc": "",
+      "time": "2026-06-26T00:00:00",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "The White House is asking OpenAI to slow roll the release of its new model over safety concerns",
+      "url": "https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns/",
+      "desc": "OpenAI reportedly plans to share its newest model, GPT 5.6, with a select group of partners instead of with the broader public. The reason: the Trump administration told it to.",
+      "time": "2026-06-25T23:34:39",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents",
+      "url": "https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/",
+      "desc": "Agent-testing startup Patronus AI, founded by former Meta AI researchers, is experiencing nearly insatiable demand, its investor says.",
+      "time": "2026-06-25T20:19:25",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "TechCrunch",
+      "lang": "en",
+      "title": "Anthropic’s Claude is winning over paid consumers, a market owned by ChatGPT",
+      "url": "https://techcrunch.com/2026/06/25/anthropics-claude-is-winning-over-paid-consumers-a-market-owned-by-chatgpt/",
+      "desc": "Despite ChatGPT's commanding market lead, consumers who pay for AI have been increasingly choosing Anthropic's Claude, data shows.",
+      "time": "2026-06-25T17:38:27",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Which tokens does a hybrid model predict better?",
+      "url": "https://huggingface.co/blog/allenai/hybrid-token-prediction",
+      "desc": "",
+      "time": "2026-06-25T16:11:42",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion",
+      "url": "https://github.com/inkeep/open-knowledge",
+      "desc": "⬆ 364分 · 170条评论",
+      "time": "2026-06-25T16:04:46+00:00",
+      "hot": "hot",
+      "tags": []
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "huggingface/datasets",
+      "url": "https://github.com/huggingface/datasets",
+      "desc": "🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools ⭐ 21,658",
+      "time": "2026-06-25T14:57:10+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Thoughts on Asimovian AI Beyond LLMs and Creative Machines",
+      "url": "https://news.ycombinator.com/item?id=48671659",
+      "desc": "⬆ 2分 · 0条评论",
+      "time": "2026-06-25T10:55:32+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: ccMarvin – Just Email with AI",
+      "url": "https://ccmarvin.com",
+      "desc": "⬆ 7分 · 3条评论",
+      "time": "2026-06-24T17:23:05+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+      "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+      "desc": "",
+      "time": "2026-06-24T16:00:13",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hacker News",
+      "lang": "en",
+      "title": "Show HN: Sipp – Run small local LLMs in browser 3x faster",
+      "url": "https://www.sipp.sh",
+      "desc": "⬆ 5分 · 3条评论",
+      "time": "2026-06-24T14:52:44+00:00",
+      "hot": null,
+      "tags": []
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "Nixtla/nixtla",
+      "url": "https://github.com/Nixtla/nixtla",
+      "desc": "TimeGPT-1: production ready pre-trained Time Series Foundation Model  for forecasting and anomaly detection. Generative pretrained transformer for time series trained on over 100B data points. It's ca ⭐ 3,934",
+      "time": "2026-06-24T01:44:49+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
+      "url": "https://huggingface.co/blog/ffasr-leaderboard",
+      "desc": "",
+      "time": "2026-06-24T00:00:00",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
+      "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+      "desc": "",
+      "time": "2026-06-23T12:51:55",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
+      "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
+      "desc": "",
+      "time": "2026-06-23T00:00:00",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "Experimenting with the proposed Cross-Origin Storage API in Transformers.js",
+      "url": "https://huggingface.co/blog/cross-origin-storage",
+      "desc": "",
+      "time": "2026-06-23T00:00:00",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
+      "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+      "desc": "",
+      "time": "2026-06-22T13:18:56",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "We got local models to triage the OpenClaw repo for FREE!*",
+      "url": "https://huggingface.co/blog/local-models-pr-triage",
+      "desc": "",
+      "time": "2026-06-22T00:00:00",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "liyupi/ai-guide",
+      "url": "https://github.com/liyupi/ai-guide",
+      "desc": "程序员鱼皮的 AI 资源大全 + Vibe Coding 零基础教程，分享 OpenClaw 保姆级教程、大模型玩法（DeepSeek / GPT / Gemini / Claude / GLM）、最新 AI 资讯、Prompt 提示词大全、AI 知识百科（Agent Skills / RAG / MCP / A2A）、AI 编程教程（Harness Engineering）、AI 工具用法（Cu ⭐ 16,382",
+      "time": "2026-06-20T02:45:46+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "Hugging Face",
+      "lang": "en",
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "desc": "",
+      "time": "2026-06-18T18:13:13",
+      "hot": "opensource",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "bishwaghimire/ai-learning-roadmaps",
+      "url": "https://github.com/bishwaghimire/ai-learning-roadmaps",
+      "desc": "A complete, structured hub for learning Artificial Intelligence — covering AI, Machine Learning, Deep Learning, and Data Science with books, roadmaps, and curated resources from beginner to advanced. ⭐ 675",
+      "time": "2026-06-15T08:02:50+00:00",
+      "hot": null,
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "rasbt/reasoning-from-scratch",
+      "url": "https://github.com/rasbt/reasoning-from-scratch",
+      "desc": "Implement a reasoning LLM in PyTorch from scratch, step by step ⭐ 4,572",
+      "time": "2026-06-12T01:02:45+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "tensorzero/tensorzero",
+      "url": "https://github.com/tensorzero/tensorzero",
+      "desc": "TensorZero is an open-source LLMOps platform that unifies an LLM gateway, observability, evaluation, optimization, and experimentation. ⭐ 11,673",
+      "time": "2026-06-11T01:48:44+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "rasbt/LLMs-from-scratch",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "desc": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step ⭐ 97,924",
+      "time": "2026-06-02T14:14:19+00:00",
+      "hot": "hot",
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "yzfly/Awesome-AGI-Agents",
+      "url": "https://github.com/yzfly/Awesome-AGI-Agents",
+      "desc": "🤖 Awesome list of AGI Agents. Agents 精选资源合集. ⭐ 539",
+      "time": "2026-05-29T04:23:10+00:00",
+      "hot": null,
+      "tags": [
+        "opensource"
+      ]
+    },
+    {
+      "source": "GitHub",
+      "lang": "en",
+      "title": "vixhal-baraiya/microgpt-c",
+      "url": "https://github.com/vixhal-baraiya/microgpt-c",
+      "desc": "The most atomic way to train and inference a GPT in pure, dependency-free C ⭐ 571",
+      "time": "2026-05-03T10:04:15+00:00",
+      "hot": null,
+      "tags": [
+        "opensource"
+      ]
+    }
+  ]
+}
