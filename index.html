@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1.0">
+<title>刘闪电 · 健身追踪</title>
+<script src=https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#0f0f0f;color:#e0e0e0;padding:24px;max-width:1200px;margin:0 auto}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid #2a2a2a}
+.header h1{font-size:20px;font-weight:700;background:linear-gradient(135deg,#f97316,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header .date{color:#888;font-size:13px}
+
+.goal-section{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;padding:18px;margin-bottom:16px;border:1px solid #2a2a4a}
+.goal-title{font-size:14px;color:#888;margin-bottom:10px;display:flex;justify-content:space-between}
+.goal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.goal-item{text-align:center;padding:8px;background:rgba(255,255,255,0.03);border-radius:8px}
+.goal-item .lbl{font-size:11px;color:#888}
+.goal-item .val{font-size:28px;font-weight:700;margin:2px 0}
+.progress-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.progress-row .plbl{font-size:11px;width:60px;color:#aaa}
+.progress-bar-bg{flex:1;height:6px;background:#2a2a2a;border-radius:3px;overflow:hidden}
+.progress-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.progress-row .pct{font-size:10px;width:32px;text-align:right;color:#888}
+
+.chart-section{background:#1a1a1a;border-radius:12px;padding:18px;margin-bottom:16px;border:1px solid #2a2a2a}
+.chart-container{position:relative;height:260px}
+.chart-section .title{font-size:14px;color:#aaa;margin-bottom:10px}
+
+.mini-chart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.mini-chart{background:#1a1a1a;border-radius:10px;padding:14px;border:1px solid #2a2a2a}
+.mini-chart .mtitle{font-size:12px;color:#888;margin-bottom:6px}
+.mini-chart .mcanvas{position:relative;height:100px}
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.stat-card{background:#1a1a1a;border-radius:10px;padding:14px;border:1px solid #2a2a2a}
+.stat-card .label{color:#888;font-size:11px;margin-bottom:3px}
+.stat-card .value{font-size:22px;font-weight:700}
+.green{color:#22c55e}.red{color:#ef4444}.orange{color:#f97316}.blue{color:#3b82f6}
+.section-title{font-size:14px;font-weight:600;margin:16px 0 10px;color:#ccc}
+table{width:100%;border-collapse:collapse;background:#1a1a1a;border-radius:8px;overflow:hidden;margin-bottom:16px;font-size:12px}
+th{background:#252525;padding:7px 5px;font-size:12px;color:#999;font-weight:500;text-align:center;white-space:nowrap}
+td{padding:7px 5px;text-align:center;border-bottom:1px solid #252525}
+tr:hover td{background:#222}
+.meal-col{background:#1a2a1a}
+.surplus-pos{color:#22c55e;font-weight:600}
+.surplus-neg{color:#ef4444;font-weight:600}
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px}
+.core-section{background:#1a1a1a;border-radius:10px;padding:16px;border:1px solid #2a2a2a}
+.core-surplus{text-align:center;padding:10px 0 14px;border-bottom:1px solid #2a2a2a;margin-bottom:12px}
+.core-surplus .core-big{font-size:38px;font-weight:700;line-height:1}
+.core-surplus .core-unit{font-size:14px;color:#888;margin-top:2px}
+.core-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.core-card{background:rgba(255,255,255,0.03);border-radius:8px;padding:12px;text-align:center}
+.core-label{font-size:11px;color:#888;margin-bottom:4px}
+.core-mid{font-size:24px;font-weight:600}
+.core-mid .core-unit{font-size:13px;color:#888}
+.core-detail{font-size:11px;color:#666;margin-top:4px}
+.tag-chest{background:#1e3a5f;color:#60a5fa}
+.tag-leg{background:#1a3a1a;color:#4ade80}
+.tag-back{background:#3a2a1a;color:#fb923c}
+.tag-shoulder{background:#3a1a3a;color:#c084fc}
+.tag-rest{background:#2a2a2a;color:#888}
+.tag-cardio{background:#3a2a2a;color:#f87171}
+.weekly-summary{background:#1a1a1a;border-radius:10px;padding:14px;margin-bottom:16px;border:1px solid #2a2a2a}
+.summary-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.summary-item{text-align:center}
+.summary-item .val{font-size:16px;font-weight:700}
+.summary-item .lbl{font-size:10px;color:#888;margin-top:2px}
+.footer{text-align:center;color:#555;font-size:10px;margin-top:24px;padding-top:14px;border-top:1px solid #2a2a2a}
+@media(max-width:768px){body{padding:12px}.goal-grid{grid-template-columns:repeat(2,1fr)}.mini-chart-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.summary-grid{grid-template-columns:repeat(3,1fr)}.chart-container{height:200px}.goal-item .val{font-size:22px}}
+</style>
+</head>
+<body>
+
+<div class=header>
+  <h1>🏋️ 刘闪电 · 健身追踪</h1>
+  <div class=date>06-26 23:00</div>
+</div>
+
+<!-- TOP: Daily Stats + Meals -->
+<div class=section-title style=margin-top:0>📊 今日核心数据</div>
+<div class="core-section" style=margin-bottom:12px>
+  <div class="core-surplus red">
+    <div class=core-label>热量盈余</div>
+    <div class=core-big>-288</div>
+    <div class=core-unit>kcal</div>
+  </div>
+  <div class=core-row>
+    <div class=core-card>
+      <div class=core-label>今日总摄入</div>
+      <div class=core-mid>2163 <span class=core-unit>kcal</span></div>
+    </div>
+    <div class=core-card>
+      <div class=core-label>今日总消耗</div>
+      <div class=core-mid>2451 <span class=core-unit>kcal</span></div>
+      <div class=core-detail>基础代谢 <strong style=color:#22d3ee>1748</strong> + 运动 <strong style=color:#f97316>703</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class=section-title style=margin-top:0>🍽 今日饮食</div>
+<table><thead><tr><th style=width:15%>餐次</th><th style=width:12%>热量</th><th>内容</th></tr></thead><tbody><tr><td>🌅 早餐</td><td class=meal-col>78 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>一个水煮蛋</td></tr>
+<tr><td>☀️ 午餐</td><td class=meal-col>780 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>山姆番茄罗勒恰巴塔三明治（两个煎蛋 + 一只鸭腿肉 + 生菜）</td></tr>
+<tr><td>🌙 晚餐</td><td class=meal-col>1080 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>杭帮菜生日聚餐（克制）+ 半碗虾爆鳝面 + 小块巧克力蛋糕</td></tr>
+<tr><td>🍪 加餐</td><td class=meal-col>225 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>一根香蕉 + 30g蛋白粉</td></tr>
+</tbody></table>
+
+<!-- Training -->
+<div class=section-title>💪 今日训练（肩）</div>
+<table><thead><tr>
+<th>动作</th>
+<th>组</th>
+<th>次</th>
+<th>重量</th>
+<th>有氧<br>(min)</th>
+<th>灵活运动</th>
+</tr></thead><tbody><tr><td>前平举+侧平举</td><td>3</td><td>(10-20)</td><td>2.5-3-4kg</td><td>--</td><td>--</td></tr>
+<tr><td>实力推+对握推举</td><td>3</td><td>(6+1)</td><td>15 + 3×(10-12)@2.5×2kg</td><td></td><td></td></tr>
+<tr><td>蝴蝶机反向飞鸟+绳索Y举</td><td>3-4</td><td>(10-15)</td><td>70-50kg</td><td></td><td></td></tr>
+<tr><td>绳索前平举</td><td>3</td><td>10-12</td><td>10kg</td><td></td><td></td></tr>
+<tr><td>对握哑铃飞鸟</td><td>3</td><td>10-12</td><td>4kg</td><td></td><td></td></tr>
+</tbody></table>
+
+<!-- Goal Section: Weight -->
+<div class=goal-section>
+  <div class=goal-title style=margin-bottom:12px><span>🎯 体重目标</span><span style=color:#888>已减 <strong style=color:#22c55e>7.0kg</strong> &nbsp;·&nbsp; 还需 <strong style=color:#f97316>8.0kg</strong></span></div>
+  <div style=display:flex;align-items:center;justify-content:space-around;margin-bottom:10px>
+    <div style=text-align:center><div style=font-size:11px;color:#888>起始</div><div style=font-size:26px;font-weight:700;color:#555>90<span style=font-size:14px;color:#888>kg</span></div></div>
+    <div style=font-size:20px;color:#444>→</div>
+    <div style=text-align:center><div style=font-size:11px;color:#888>当前</div><div style=font-size:26px;font-weight:700;color:#3b82f6>83.0<span style=font-size:14px;color:#3b82f6>kg</span></div></div>
+    <div style=font-size:20px;color:#444>→</div>
+    <div style=text-align:center><div style=font-size:11px;color:#888>目标</div><div style=font-size:26px;font-weight:700;color:#22c55e>75<span style=font-size:14px;color:#22c55e>kg</span></div></div>
+  </div>
+  <div class=progress-row><span class=plbl>进度</span><div class=progress-bar-bg><div class=progress-bar-fill style="width:46.7%;background:linear-gradient(90deg,#3b82f6,#22c55e)"></div></div><span class=pct>47%</span></div>
+</div>
+
+<!-- Goal Section: Body Fat -->
+<div class=goal-section style=margin-bottom:16px>
+  <div class=goal-title style=margin-bottom:12px><span>🎯 体脂目标</span><span style=color:#888>已减 <strong style=color:#22c55e>5.1%</strong> &nbsp;·&nbsp; 还需 <strong style=color:#f97316>9.5%</strong></span></div>
+  <div style=display:flex;align-items:center;justify-content:space-around;margin-bottom:10px>
+    <div style=text-align:center><div style=font-size:11px;color:#888>起始</div><div style=font-size:26px;font-weight:700;color:#555>29.6<span style=font-size:14px;color:#888>%</span></div></div>
+    <div style=font-size:20px;color:#444>→</div>
+    <div style=text-align:center><div style=font-size:11px;color:#888>当前</div><div style=font-size:26px;font-weight:700;color:#c084fc>24.5<span style=font-size:14px;color:#c084fc>%</span></div></div>
+    <div style=font-size:20px;color:#444>→</div>
+    <div style=text-align:center><div style=font-size:11px;color:#888>目标</div><div style=font-size:26px;font-weight:700;color:#ec4899>15<span style=font-size:14px;color:#ec4899>%</span></div></div>
+  </div>
+  <div class=progress-row><span class=plbl>进度</span><div class=progress-bar-bg><div class=progress-bar-fill style="width:34.9%;background:linear-gradient(90deg,#c084fc,#ec4899)"></div></div><span class=pct>35%</span></div>
+</div>
+
+<!-- Main Chart: Weight + Body Fat -->
+<div class=chart-section>
+  <div class=title>📈 体重 & 体脂变化</div>
+  <div class=chart-container><canvas id=mainChart></canvas></div>
+</div>
+
+<!-- Mini Charts: Muscle, Visceral, BMI -->
+<div class=mini-chart-grid>
+  <div class=mini-chart>
+    <div class=mtitle>💪 骨骼肌 (kg)</div>
+    <div class=mcanvas><canvas id=muscleChart></canvas></div>
+  </div>
+  <div class=mini-chart>
+    <div class=mtitle>🔴 内脏脂肪</div>
+    <div class=mcanvas><canvas id=visceralChart></canvas></div>
+  </div>
+  <div class=mini-chart>
+    <div class=mtitle>📐 BMI</div>
+    <div class=mcanvas><canvas id=bmiChart></canvas></div>
+  </div>
+</div>
+
+<!-- Weekly -->
+<div class=section-title>📊 本周追踪</div>
+<table><thead><tr><th>日期</th><th>体重<br>(kg)</th><th>早<br>(kcal)</th><th>午<br>(kcal)</th><th>晚<br>(kcal)</th><th>加餐<br>(kcal)</th><th>摄入</th><th>基代</th><th>手环</th><th>消耗</th><th>盈余</th><th>训练</th><th>有氧<br>(min)</th><th>灵活</th></tr></thead><tbody><tr><td>04-15<br><span style=font-size:10px;color:#666>周三</span></td><td>85.6</td><td>360</td><td>520</td><td>800</td><td>305</td><td><strong>1985</strong></td><td>1731</td><td>800.0</td><td>2531</td><td class='surplus-neg'>-546</td><td><span class='tag tag-rest'>训练</span></td><td>--</td><td>--</td></tr>
+<tr><td>04-21<br><span style=font-size:10px;color:#666>周二</span></td><td>--</td><td>340</td><td>650</td><td>530</td><td>225</td><td><strong>1745</strong></td><td>1731</td><td>1140.0</td><td>2871</td><td class='surplus-neg'>-1126</td><td><span class='tag tag-rest'>训练</span></td><td>--</td><td>--</td></tr>
+<tr><td>04-22<br><span style=font-size:10px;color:#666>周三</span></td><td>--</td><td>340</td><td>700</td><td>570</td><td>315</td><td><strong>1925</strong></td><td>1731</td><td>802.0</td><td>2533</td><td class='surplus-neg'>-608</td><td><span class='tag tag-rest'>训练</span></td><td>--</td><td>--</td></tr>
+<tr><td>04-23<br><span style=font-size:10px;color:#666>周四</span></td><td>--</td><td>430</td><td>650</td><td>500</td><td>986</td><td><strong>2566</strong></td><td>1731</td><td>1000.0</td><td>2731</td><td class='surplus-neg'>-165</td><td><span class='tag tag-rest'>训练</span></td><td>--</td><td>--</td></tr>
+<tr><td>04-24<br><span style=font-size:10px;color:#666>周五</span></td><td>85.2</td><td>-</td><td>850</td><td>650</td><td>100</td><td><strong>1600</strong></td><td>1731</td><td>874.0</td><td>2605</td><td class='surplus-neg'>-1005</td><td><span class='tag tag-cardio'>有氧</span></td><td>--</td><td>--</td></tr>
+<tr><td>05-25<br><span style=font-size:10px;color:#666>周一</span></td><td>84.5</td><td>--</td><td>--</td><td>--</td><td></td><td><strong>--</strong></td><td>1748</td><td>--</td><td>--</td><td class=''>--</td><td><span class='tag tag-rest'>休息</span></td><td>--</td><td>--</td></tr>
+<tr><td>06-26<br><span style=font-size:10px;color:#666>周五</span></td><td>83</td><td>78</td><td>780</td><td>1080</td><td>225</td><td><strong>2163</strong></td><td>1748</td><td>703</td><td>2451</td><td class='surplus-neg'>-288</td><td><span class='tag tag-shoulder'>肩</span></td><td>--</td><td>--</td></tr>
+</tbody></table>
+
+<div class=section-title>📈 本周小结</div>
+<div class=weekly-summary><div class=summary-grid>
+  <div class=summary-item><div class=val>6/7</div><div class=lbl>训练天数</div></div>
+  <div class=summary-item><div class=val>1997.3</div><div class=lbl>日均摄入</div></div>
+  <div class=summary-item><div class=val>2620.3</div><div class=lbl>日均消耗</div></div>
+  <div class=summary-item><div class=val style=color:#ef4444>--</div><div class=lbl>日均盈余</div></div>
+  <div class=summary-item><div class=val>0</div><div class=lbl>灵活运动</div></div>
+</div></div>
+
+<div class=footer>由 Hermes Agent · The Dude 自动更新 | 数据：刘闪电身体数据.xlsx</div>
+
+<script>
+const cd = {"mainLabels": ["\u8d77\u59cb", "03-30", "04-01", "04-02", "04-09", "04-11", "04-15", "04-24", "05-25", "06-26"], "mainWeights": [90.0, 87.9, 86.9, 86.75, 86.5, 86.4, 85.6, 85.2, 84.5, 83.0], "mainBf": [29.6, null, null, null, null, null, 27.0, null, 24.5, null], "goalW": 75.0, "goalBF": 15.0, "mLabels": ["03-26", "04-15", "05-25"], "mMuscle": [35.5, 35.4, 36.1], "mVisceral": [11.0, 10.0, 10.0], "mBmi": [29.2, 28.0, 27.6]};
+// Main chart: Weight + Body Fat
+new Chart(document.getElementById('mainChart'),{
+  type:'line',
+  data:{
+    labels:cd.mainLabels,
+    datasets:[
+      {label:'体重 (kg)',data:cd.mainWeights,borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,0.12)',fill:true,tension:.3,
+        pointRadius:5,borderWidth:2,pointBackgroundColor:'#3b82f6',yAxisID:'y',spanGaps:true},
+      {label:'目标 75kg',data:cd.mainLabels.map(()=>cd.goalW),borderColor:'#22c55e',borderDash:[6,3],pointRadius:0,borderWidth:2,yAxisID:'y'},
+      {label:'体脂率 (%)',data:cd.mainBf,borderColor:'#c084fc',backgroundColor:'rgba(192,132,252,0.06)',fill:false,tension:.3,
+        pointRadius:5,borderWidth:2,pointBackgroundColor:'#c084fc',yAxisID:'y1',spanGaps:true},
+      {label:'目标 15%',data:cd.mainLabels.map(()=>cd.goalBF),borderColor:'#ec4899',borderDash:[6,3],pointRadius:0,borderWidth:2,yAxisID:'y1'},
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    interaction:{mode:'index',intersect:false},
+    plugins:{legend:{labels:{color:'#aaa',font:{size:11},usePointStyle:true,padding:12},position:'top'}},
+    scales:{
+      x:{ticks:{color:'#666',font:{size:9}},grid:{color:'#2a2a2a'}},
+      y:{type:'linear',position:'left',min:70,max:95,
+        ticks:{color:'#3b82f6',font:{size:10},callback:v=>v+'kg'},grid:{color:'#2a2a2a'}},
+      y1:{type:'linear',position:'right',min:10,max:40,
+        ticks:{color:'#c084fc',font:{size:10},callback:v=>v+'%'},grid:{drawOnChartArea:false}},
+    }
+  }
+});
+
+// Helper for mini charts
+function miniChart(id, labels, data, color) {
+  new Chart(document.getElementById(id),{
+    type:'line',
+    data:{labels:labels,datasets:[{data:data,borderColor:color,backgroundColor:color+'22',
+      fill:true,tension:.3,pointRadius:4,pointBackgroundColor:color,borderWidth:2,
+      spanGaps:false}]},
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a1a',titleColor:'#eee',bodyColor:'#ccc'}},
+      scales:{
+        x:{ticks:{color:'#555',font:{size:8},maxTicksLimit:4},grid:{color:'#2a2a2a'}},
+        y:{ticks:{color:'#555',font:{size:9}},grid:{color:'#2a2a2a'}},
+      }
+    }
+  });
+}
+miniChart('muscleChart', cd.mLabels, cd.mMuscle, '#f97316');
+miniChart('visceralChart', cd.mLabels, cd.mVisceral, '#ef4444');
+miniChart('bmiChart', cd.mLabels, cd.mBmi, '#22d3ee');
+</script>
+</body>
+</html>
