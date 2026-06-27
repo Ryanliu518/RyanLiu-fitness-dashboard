@@ -60,8 +60,6 @@ tr:hover td{background:#222}
 .btn-train{display:inline-block;font-size:11px;color:#888;background:#2a2a2a;border:1px solid #3a3a3a;border-radius:6px;padding:4px 10px;cursor:pointer;margin-left:10px;transition:.2s}
 .btn-train:hover{background:#3a3a3a;color:#ccc}
 .train-history{display:none}
-.train-history thead{position:sticky;top:0;z-index:2}
-.train-history thead th{background:#252525}
 .tag-chest{background:#1e3a5f;color:#60a5fa}
 .tag-leg{background:#1a3a1a;color:#4ade80}
 .tag-back{background:#3a2a1a;color:#fb923c}
@@ -81,7 +79,7 @@ tr:hover td{background:#222}
 
 <div class=header>
   <h1>🏋️ 刘闪电 · 健身追踪</h1>
-  <div class=date>06-27 14:43</div>
+  <div class=date>06-27 14:48</div>
 </div>
 
 <!-- TOP: Daily Stats + Meals -->
@@ -124,10 +122,12 @@ tr:hover td{background:#222}
 
 <div class="train-history" id=trainHistory>
   <div class=section-title style=margin-top:12px>📋 全部训练记录</div>
-  <div style=max-height:500px;overflow-y:auto;border-radius:8px;position:relative>
-  <table><thead><tr>
-    <th style=width:12%>日期</th><th>动作</th><th>组</th><th>次</th><th>重量(kg)</th><th style=width:10%>有氧<br>(min)</th>
-  </tr></thead><tbody><tr class=hdr-day_0 onclick=toggleDay('day_0') style=cursor:pointer;background:#1a1a2e><td>03-30<br><span style=font-size:9px;color:#666>周一</span></td><td colspan=4 style=text-align:left><span class='tag tag-rest'>训练</span>  </td><td style=font-size:9px;color:#555>▶</td></tr>
+  <table style=table-layout:fixed>
+  <thead><tr>
+    <th style=width:12%>日期</th><th>动作</th><th style=width:8%>组</th><th style=width:10%>次</th><th style=width:14%>重量(kg)</th><th style=width:10%>有氧<br>(min)</th>
+  </tr></thead></table>
+  <div style=max-height:480px;overflow-y:auto;border-radius:0 0 8px 8px>
+  <table><tbody><tr class=hdr-day_0 onclick=toggleDay('day_0') style=cursor:pointer;background:#1a1a2e><td>03-30<br><span style=font-size:9px;color:#666>周一</span></td><td colspan=4 style=text-align:left><span class='tag tag-rest'>训练</span>  </td><td style=font-size:9px;color:#555>▶</td></tr>
 <tr class='day_0' style=display:none><td></td><td>肩胛骨活动度训练</td><td></td><td></td><td></td><td></td></tr>
 <tr class='day_0' style=display:none><td></td><td>高位下拉</td><td>4</td><td>15-20</td><td>40/45/45kg</td><td></td></tr>
 <tr class='day_0' style=display:none><td></td><td>T杆划船</td><td>3</td><td>15-20</td><td>5/7.5kg</td><td></td></tr>
