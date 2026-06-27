@@ -186,6 +186,8 @@ function render(){
     const badgeCls = i.lang === 'cn' ? 'badge-cn' : 'badge-en';
     const summaryHtml = i.summary ? `<div class=summary>📌 ${i.summary}</div>` : '';
     const origTitleHtml = (i.lang === 'en' && i.title) ? `<div class=original-title>📰 ${i.title}</div>` : '';
+    // 无摘要的英文新闻加提示标签
+    const noSummaryTag = (i.lang==='en' && !i.summary) ? '<span style="font-size:10px;color:#ff8800;border:1px solid #ff880033;border-radius:3px;padding:1px 5px;margin-left:6px">原文·英文</span>' : '';
 
     return `<div class=news-card>
       <div class=meta>
@@ -193,7 +195,7 @@ function render(){
         ${i.hot==='hot'?'<span style=font-size:12px>🔥</span>':''}
         <span class=time>${timeAgo(i.time)}</span>
       </div>
-      <div class=title>${i.lang==='cn' ? i.title : (i.title_cn || i.title)}</div>
+      <div class=title>${i.lang==='cn' ? i.title : (i.title_cn || i.title)}${noSummaryTag}</div>
       ${summaryHtml}
       ${origTitleHtml}
       <a class=link href="${i.url}" target=_blank rel=noopener>查看原文 →</a>
