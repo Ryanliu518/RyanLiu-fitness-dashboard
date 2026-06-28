@@ -82,7 +82,7 @@ tr:hover td{background:#222}
     <h1>🏋️ 刘闪电 · 健身追踪</h1>
     <span style="font-size:13px;font-weight:700;font-style:italic;letter-spacing:2px;background:linear-gradient(135deg,#f97316,#eab308);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Start it, Try it, Win it</span>
   </div>
-  <div class=date>06-28 22:33</div>
+  <div class=date>06-28 22:34</div>
 </div>
 
 <!-- TOP: Daily Stats + Meals -->
@@ -106,7 +106,7 @@ tr:hover td{background:#222}
   </div>
 </div>
 
-<div class=section-title style=margin-top:0>🍽 今日饮食</div>
+<div class=section-title style=margin-top:0>🍽 今日饮食<span class=btn-train onclick="toggleMeal()">📋 全部饮食记录</span></div>
 <table><thead><tr><th style=width:15%>餐次</th><th style=width:12%>热量<br>(kcal)</th><th>内容</th></tr></thead><tbody><tr><td>🌅 早餐</td><td class=meal-col>305 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>35g山姆无糖燕麦+10g奇亚籽+一盒山姆脱脂牛奶</td></tr>
 <tr><td>☀️ 午餐</td><td class=meal-col>900 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>单人份钵钵鸡+单人份辣椒炒肉+半碗米饭</td></tr>
 <tr><td>🌙 晚餐</td><td class=meal-col>900 kcal</td><td style=text-align:left;color:#aaa;font-size:12px>西餐</td></tr>
@@ -215,6 +215,95 @@ tr:hover td{background:#222}
   </div>
 </div>
 
+<div class="train-history" id=mealHistory>
+  <div class=section-title style=margin-top:12px>📋 全部饮食记录</div>
+  <div style=max-height:550px;overflow-y:auto;border-radius:8px>
+  <table><thead><tr><th style=width:12%>日期</th><th>餐次</th><th style=width:12%>热量<br>(kcal)</th><th>内容</th></tr></thead><tbody><tr style=background:#1a1a2e><td>03-30<br><span style=font-size:9px;color:#666>周一</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2150 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>400 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>过夜燕麦片 / 一个水煮蛋 / 一个蛋白</td></tr>
+<tr><td></td><td>午餐</td><td>600 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一碗小满手工粉（贵州酸汤） / 一份蔬菜 / 一个越南春卷</td></tr>
+<tr><td></td><td>晚餐</td><td>600 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一个越南春卷 / 鸡蛋炒虾仁 / 凉拌马兰头</td></tr>
+<tr><td></td><td>加餐</td><td>550 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉20g / 三文鱼280g</td></tr>
+<tr style=background:#1a1a2e><td>03-31<br><span style=font-size:9px;color:#666>周二</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1640 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>400 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>过夜燕麦片 / 一个水煮蛋 / 一个蛋白</td></tr>
+<tr><td></td><td>午餐</td><td>700 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一块鸡胸肉炒两个鸡蛋 / 一个生西红柿 / 两个越南春卷 / 一碗希腊酸奶+蓝莓+一勺奇亚籽</td></tr>
+<tr><td></td><td>晚餐</td><td>450 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一小碗糙米饭 / 水煮虾仁 / 水煮青菜</td></tr>
+<tr><td></td><td>加餐</td><td>90 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉20g</td></tr>
+<tr style=background:#1a1a2e><td>04-01<br><span style=font-size:9px;color:#666>周三</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1990 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>400 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>过夜燕麦片 / 一个水煮蛋 / 一个蛋白</td></tr>
+<tr><td></td><td>午餐</td><td>850 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一碗爆炒兰溪手擀面汤面</td></tr>
+<tr><td></td><td>晚餐</td><td>650 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>鸡胸肉炒虾仁 / 三色糙米饭+豆类 / 白灼生菜</td></tr>
+<tr><td></td><td>加餐</td><td>90 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉20g</td></tr>
+<tr style=background:#1a1a2e><td>04-02<br><span style=font-size:9px;color:#666>周四</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2250 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>500 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一口生吐司面包 / 两片煎火腿 / 一个半的煎鸡蛋 / 50g隔夜燕麦 / 一盒山姆全脂牛奶</td></tr>
+<tr><td></td><td>午餐</td><td>550 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一碗牛肉越南粉 / 一颗生菜 / 一把虾仁</td></tr>
+<tr><td></td><td>晚餐</td><td>950 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>椰子鸡 / 青菜 / 一小坨米饭 / 一小碗汤 / 一根半的笋</td></tr>
+<tr><td></td><td>加餐</td><td>250 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一小撮哈密瓜 / 一根香蕉</td></tr>
+<tr style=background:#1a1a2e><td>04-08<br><span style=font-size:9px;color:#666>周三</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2190 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>450 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片 / 两个水煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>580 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>塔司丁鸭鸭堡</td></tr>
+<tr><td></td><td>晚餐</td><td>600 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>三文鱼 / 蘑菇辣椒炒虾仁 / 米饭</td></tr>
+<tr><td></td><td>加餐</td><td>560 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一小撮哈密瓜 / 一根香蕉 / 一个希腊酸奶杯+蓝莓</td></tr>
+<tr style=background:#1a1a2e><td>04-09<br><span style=font-size:9px;color:#666>周四</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1760 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>450 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片 / 两个水煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>550 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>谢大牛牛腩套餐</td></tr>
+<tr><td></td><td>晚餐</td><td>530 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>西兰花 / 鸡胸肉 / 杂粮米饭</td></tr>
+<tr><td></td><td>加餐</td><td>230 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一根香蕉</td></tr>
+<tr style=background:#1a1a2e><td>04-10<br><span style=font-size:9px;color:#666>周五</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2110 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>450 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片 / 两个水煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>480 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>自煮番茄面</td></tr>
+<tr><td></td><td>晚餐</td><td>850 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>半只鸡 / 鸡汤 / 空心菜尖</td></tr>
+<tr><td></td><td>加餐</td><td>330 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一根香蕉 / 一口茶饼</td></tr>
+<tr style=background:#1a1a2e><td>04-13<br><span style=font-size:9px;color:#666>周一</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2340 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>360 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片-脱脂牛奶 / 两个水煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>950 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>吊龙面</td></tr>
+<tr><td></td><td>晚餐</td><td>800 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>4块卤鹅肉 / 一块泡菜饼 / 荷兰豆炒虾 / 米饭</td></tr>
+<tr><td></td><td>加餐</td><td>230 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一根香蕉</td></tr>
+<tr style=background:#1a1a2e><td>04-14<br><span style=font-size:9px;color:#666>周二</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2070 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>290 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片-脱脂牛奶 / 一把蓝莓</td></tr>
+<tr><td></td><td>午餐</td><td>700 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>牛腱子越南粉 / 3块卤鹅肉 / 白灼西兰花 / 一个全蛋-一个蛋白</td></tr>
+<tr><td></td><td>晚餐</td><td>750 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>三个蒸春卷 / 青豆炒虾仁 / 一根黄瓜 / 希腊酸奶配一把蓝莓和一把山核桃</td></tr>
+<tr><td></td><td>加餐</td><td>330 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一根香蕉 / 一小把哈密瓜</td></tr>
+<tr style=background:#1a1a2e><td>04-15<br><span style=font-size:9px;color:#666>周三</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1985 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>360 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片-脱脂牛奶 / 一把蓝莓 / 一个白煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>520 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>百佳旺蔬菜肉组合</td></tr>
+<tr><td></td><td>晚餐</td><td>800 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>牛肉 / 虾 / 蔬菜</td></tr>
+<tr><td></td><td>加餐</td><td>305 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一根香蕉 / 一个蟠桃 / 一杯瑞幸苦瓜美式</td></tr>
+<tr style=background:#1a1a2e><td>04-21<br><span style=font-size:9px;color:#666>周二</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1745 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>340 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片-脱脂牛奶 / 一把奇亚籽 / 一个白煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>650 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一个照烧鸡排贝果加煎蛋</td></tr>
+<tr><td></td><td>晚餐</td><td>530 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>空气炸锅少油版本 / 两块鸡腿肉 / 一把娃娃菜 / 一把虾仁</td></tr>
+<tr><td></td><td>加餐</td><td>225 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一小包魔芋爽 / 一小个黄山烧饼</td></tr>
+<tr style=background:#1a1a2e><td>04-22<br><span style=font-size:9px;color:#666>周三</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1925 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>340 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片-脱脂牛奶 / 一把奇亚籽 / 一个白煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>700 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>三文鱼 / 蛋炒饭 / 两根黄瓜</td></tr>
+<tr><td></td><td>晚餐</td><td>570 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>水煮青豆黑木耳 / 蛋炒饭 / 空气炸锅两块去皮鸡胸肉</td></tr>
+<tr><td></td><td>加餐</td><td>315 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 一小包魔芋爽 / 两个小个黄山烧饼</td></tr>
+<tr style=background:#1a1a2e><td>04-23<br><span style=font-size:9px;color:#666>周四</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2566 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>430 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>燕麦片-脱脂牛奶 / 一把奇亚籽 / 一小把山核桃</td></tr>
+<tr><td></td><td>午餐</td><td>650 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>越南粉 / 加料一把虾 / 加料两个鸡蛋</td></tr>
+<tr><td></td><td>晚餐</td><td>500 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>水煮荷兰豆 / 糙米饭 / 两块去皮鸡腿肉空气炸锅</td></tr>
+<tr><td></td><td>加餐</td><td>986 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>蛋白粉30g / 两个小黄山烧饼 / 一包桃酥两小薄片 / 一杯苦瓜轻体美式 / 4分之1个西瓜 / 半个芒果 / 半个凤梨</td></tr>
+<tr style=background:#1a1a2e><td>04-24<br><span style=font-size:9px;color:#666>周五</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1600 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>- kcal</td><td style=text-align:left;font-size:11px;color:#aaa>-</td></tr>
+<tr><td></td><td>午餐</td><td>850 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>大米先生双人套餐 / 半盒饭 / 1/2 青菜 / 2/3番茄炒蛋 / 2/3 辣椒炒肉 / 2/3 青椒炒鸡</td></tr>
+<tr><td></td><td>晚餐</td><td>650 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>椰子鸡 / 带骨鸡肉500g / 一碗汤 / 生菜+蘑菇</td></tr>
+<tr><td></td><td>加餐</td><td>100 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一个黄山烧饼</td></tr>
+<tr style=background:#1a1a2e><td>06-26<br><span style=font-size:9px;color:#666>周五</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2163 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>78 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一个水煮蛋</td></tr>
+<tr><td></td><td>午餐</td><td>780 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>山姆番茄罗勒恰巴塔三明治（两个煎蛋 + 一只鸭腿肉 + 生菜）</td></tr>
+<tr><td></td><td>晚餐</td><td>1080 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>杭帮菜生日聚餐（克制）+ 半碗虾爆鳝面 + 小块巧克力蛋糕</td></tr>
+<tr><td></td><td>加餐</td><td>225 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>一根香蕉 + 30g蛋白粉</td></tr>
+<tr style=background:#1a1a2e><td>06-27<br><span style=font-size:9px;color:#666>周六</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 1536 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>513 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>35g山姆无糖燕麦+一罐山姆低脂牛奶+4分之一个西瓜+一个水煮蛋</td></tr>
+<tr><td></td><td>晚餐</td><td>1023 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>半个山姆牛肉卷+霸王茶几奶茶123kcal+聚餐浅尝(麻辣火锅/凉拌鸡爪/柠檬虾/酸辣土豆丝/红烧羊肉/芹菜牛肉/清炒黄</td></tr>
+<tr style=background:#1a1a2e><td>06-28<br><span style=font-size:9px;color:#666>周日</span></td><td colspan=3 style=text-align:left;font-size:11px;color:#888>📊 摄入合计: 2105 kcal</td></tr>
+<tr><td></td><td>早餐</td><td>305 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>35g山姆无糖燕麦+10g奇亚籽+一盒山姆脱脂牛奶</td></tr>
+<tr><td></td><td>午餐</td><td>900 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>单人份钵钵鸡+单人份辣椒炒肉+半碗米饭</td></tr>
+<tr><td></td><td>晚餐</td><td>900 kcal</td><td style=text-align:left;font-size:11px;color:#aaa>西餐</td></tr>
+</tbody></table>
+  </div>
+</div>
+
 <!-- Goal Section: Weight -->
 <div class=goal-section>
   <div class=goal-title style=margin-bottom:12px><span>🎯 体重目标</span><span style=color:#888>已减 <strong style=color:#22c55e>7.0kg</strong> &nbsp;·&nbsp; 还需 <strong style=color:#f97316>8.0kg</strong></span></div>
@@ -288,6 +377,11 @@ tr:hover td{background:#222}
 <script>
 function toggleTrain() {
   var el = document.getElementById('trainHistory');
+  if (el.style.display == 'none') { el.style.display = 'block'; }
+  else { el.style.display = 'none'; }
+}
+function toggleMeal() {
+  var el = document.getElementById('mealHistory');
   if (el.style.display == 'none') { el.style.display = 'block'; }
   else { el.style.display = 'none'; }
 }
